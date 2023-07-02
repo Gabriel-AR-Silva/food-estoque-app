@@ -20,3 +20,19 @@ Route::get('/', function () {
 Route::get('/food-estoque', function () {
     return view('food-estoque');
 });
+
+Route::get('/meu-estoque', function () {
+    return view('meu-estoque');
+});
+
+Route::get('/reestoque', function () {
+    return view('reestoque');
+});
+
+Route::get('/cestas', function () {
+    return view('cestas');
+});
+
+Route::get('/validade', function () {
+    return view('validade');
+});

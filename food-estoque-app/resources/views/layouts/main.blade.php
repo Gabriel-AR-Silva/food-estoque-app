@@ -16,9 +16,24 @@
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
-        <div id="logo">
-            <img src="/img/logoTemp.png" alt="logo do site" id="logo">
-        </div>
+        <header>
+            <div class="container">
+                <nav>
+                    <div id="logo">
+                        <a href="/">
+                            <img src="/img/logoTemp.png" alt="logo do site" id="logo">
+                        </a>
+                    </div>
+                    <ul class="navbar-items">
+                        <li><a href="/food-estoque">Tudo</a></li>
+                        <li><a href="/meu-estoque">Meu estoque</a></li>
+                        <li><a href="/reestoque">Reestoque</a></li>
+                        <li><a href="/cestas">Cestas</a></li>
+                        <li><a href="/validade">Validade</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
         @yield('content')
         <script src="/js/scripts.js"></script>
     </body>
