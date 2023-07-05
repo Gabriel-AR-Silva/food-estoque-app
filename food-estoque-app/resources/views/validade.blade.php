@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
-@section('title', 'Geral')
+@section('title', 'Validade')
 
 @section('content')
 
 <br> <br> <br>
     <p>
-        Pg food estoque 
+        Pg validade 
     </p>
 
     <a href="/">Voltar a Home</a>

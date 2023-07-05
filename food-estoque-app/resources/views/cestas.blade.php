@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
-@section('title', 'Geral')
+@section('title', 'Cestas')
 
 @section('content')
 
 <br> <br> <br>
     <p>
-        Pg food estoque 
+        Pg Cestas 
     </p>
 
     <a href="/">Voltar a Home</a>

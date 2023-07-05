@@ -25,7 +25,7 @@
                         </a>
                     </div>
                     <ul class="navbar-items">
-                        <li><a href="/food-estoque">Tudo</a></li>
+                        <li><a href="/food-estoque">Geral</a></li>
                         <li><a href="/meu-estoque">Meu estoque</a></li>
                         <li><a href="/reestoque">Reestoque</a></li>
                         <li><a href="/cestas">Cestas</a></li>
