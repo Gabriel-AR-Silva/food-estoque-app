@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+    CestaController,
+    MeuEstoqueController,
+    ReestoqueController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -17,22 +22,27 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Route::get('/food-estoque', [AdminController::class, 'index']);
 Route::get('/food-estoque', function () {
     return view('food-estoque');
 });
 
-Route::get('/meu-estoque', function () {
-    return view('meu-estoque');
-});
 
-Route::get('/reestoque', function () {
-    return view('reestoque');
-});
+/**
+ *  Meu Estoque
+ */
+Route::get('/meu-estoque', [MeuEstoqueController::class, 'index']);
+Route::get('/meu-estoque/validade', [MeuEstoqueController::class, 'meu_estoque_validade']);
 
-Route::get('/cestas', function () {
-    return view('cestas');
-});
+/**
+ *  Reestoque
+ */
+Route::get('/reestoque', [ReestoqueController::class, 'index']);
 
-Route::get('/validade', function () {
-    return view('validade');
-});
+/**
+ *  Cestas
+ */
+Route::get('/cestas', [CestaController::class, 'index']);
+
+
+

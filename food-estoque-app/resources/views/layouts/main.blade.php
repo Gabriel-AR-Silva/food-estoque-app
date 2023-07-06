@@ -29,7 +29,7 @@
                         <li><a href="/meu-estoque">Meu estoque</a></li>
                         <li><a href="/reestoque">Reestoque</a></li>
                         <li><a href="/cestas">Cestas</a></li>
-                        <li><a href="/validade">Validade</a></li>
+                        <li><a href="/meu-estoque/validade">Validade</a></li>
                     </ul>
                 </nav>
             </div>
