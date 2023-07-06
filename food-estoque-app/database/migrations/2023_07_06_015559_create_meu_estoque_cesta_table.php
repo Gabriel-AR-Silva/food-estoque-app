@@ -3,6 +3,8 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Cesta;
+use App\Models\MeuEstoque;
 
 return new class extends Migration
 {
@@ -11,17 +13,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alimento_sistema', function (Blueprint $table) {
+        Schema::create('meu_estoque_cesta', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(Cesta::class);
+            $table->foreignIdFor(MeuEstoque::class);
+            $table->string("unidade_medida", 10);
+            $table->decimal(8,2);
             $table->timestamps();
         });
-    }
-
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
-    {
-        Schema::dropIfExists('alimento_sistema');
     }
 };
