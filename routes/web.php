@@ -25,7 +25,7 @@ Route::get('/', function () {
 
 // Rota para testes
 Route::get('/teste', function () {
-    $cestas = Cesta::factory()->count(10)->create()->toArray();
+    $cestas = Cesta::factory()->count(20)->create()->toArray();
     // $cestas->load([
     //     'cestas'
     // ]);

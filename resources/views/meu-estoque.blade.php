@@ -5,7 +5,6 @@
 @section('content')
 
 <br> <br> <br>
-    <p>Pg Meu estoque</p>
 
     <ul>
         @foreach( $meu_estoque as $item)

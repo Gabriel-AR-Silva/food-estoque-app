@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Cesta;
 use App\Models\MeuEstoque;
 
 /**
@@ -32,9 +31,6 @@ class MeuEstoqueFactory extends Factory
             ]),
             'foto' => $this->faker->imageUrl(),
             'validade' => $this->faker->dateTimeBetween('now', '+1 week'),
-            'cesta_id' => $this->faker->randomElement([
-                Cesta::inRandomOrder()->first()->id ?? Cesta::factory()->create()->id, null
-            ]),
         ];
     }
 }

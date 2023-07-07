@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Cesta;
 use App\Models\Reestoque;
 
 /**
@@ -31,9 +30,6 @@ class ReestoqueFactory extends Factory
                 $this->faker->randomFloat(2, 0.1, 20)
             ]),
             'foto' => $this->faker->imageUrl(),
-            'cesta_id' => $this->faker->randomElement([
-                Cesta::inRandomOrder()->first()->id ?? Cesta::factory()->create()->id, null
-            ]),
         ];
     }
 }
