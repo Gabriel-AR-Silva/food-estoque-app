@@ -1,66 +1,47 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Food Estoque (Em Desenvolvimento)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+O Food Estoque é um sistema web em desenvolvimento que visa facilitar a organização e controle de alimentos. O objetivo principal é proporcionar uma experiência intuitiva e eficiente para os usuários, ajudando-os a gerenciar seus estoques alimentícios de forma mais organizada.
 
-## About Laravel
+## Características Planejadas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- **Controle de Estoque Alimentício**: O Food Estoque permitirá registrar e monitorar o estoque de alimentos, garantindo que os usuários tenham uma visão clara dos itens disponíveis.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- **Itens Alimentícios Padrão**: O sistema terá uma lista padrão de itens alimentícios pré-definidos para facilitar a inicialização e evitar a necessidade de criar ou digitar informações manualmente.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Categorização de Itens**: Os usuários poderão categorizar os itens alimentícios com base em suas características, como tipo de alimento, grupo alimentar, data de validade, etc. Isso ajudará na organização e na busca rápida por itens específicos.
 
-## Learning Laravel
+- **Status de Estoque**: Cada item alimentício poderá ser marcado como "Estocado" ou "Reestocar" com base em sua disponibilidade atual. Isso ajudará os usuários a identificarem os itens que precisam ser repostos, evitando situações de falta de estoque.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Criação de Cestas**: Os usuários poderão criar "cestas" para agrupar um conjunto de alimentos estocados ou não estocados. Isso permitirá o planejamento de refeições, eventos ou simplesmente a organização de uma lista personalizada de alimentos desejados.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **Interface Intuitiva e Amigável**: O Food Estoque contará com uma interface moderna, amigável e responsiva, projetada para oferecer uma experiência de uso agradável em dispositivos desktop e móveis.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Tecnologias Utilizadas
 
-## Laravel Sponsors
+O Food Estoque está sendo desenvolvido utilizando as seguintes tecnologias:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+- **Laravel**: Um framework PHP poderoso e versátil, que oferece uma base sólida para o desenvolvimento web.
 
-### Premium Partners
+- **Blade**: Um mecanismo de template do Laravel que simplifica a construção de interfaces dinâmicas.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+- **HTML**: Linguagem de marcação utilizada para estruturar as páginas web.
 
-## Contributing
+- **CSS**: Linguagem de estilo utilizada para definir a aparência visual do sistema.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- **JavaScript**: Linguagem de programação para adicionar interatividade e recursos dinâmicos ao sistema.
 
-## Code of Conduct
+- **PHP**: Linguagem de programação utilizada para a lógica do backend e integração com o banco de dados.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- **MySQL**: Banco de dados relacional utilizado para armazenar os dados do sistema.
 
-## Security Vulnerabilities
+## Licença
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Ainda não foi decidida a licença do Food Estoque.
 
-## License
+## Contato
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Para obter mais informações sobre o Food Estoque ou para enviar sugestões, entre em contato por meio dos seguintes canais:
+
+- Email: gabrielsilva.webdeveloper@gmail.com ou pelo Github
+  
+
