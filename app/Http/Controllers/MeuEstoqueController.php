@@ -14,6 +14,7 @@ class MeuEstoqueController extends Controller
     }
 
     public function meu_estoque_validade() {
-        return view('/validade');
+        $meu_estoque_val = MeuEstoque::select('id', 'titulo', 'categoria', 'validade')->limit(20)->get();;
+        return view('/validade', ['meu_estoque_val' => $meu_estoque_val]);
     }
 }
