@@ -21,7 +21,7 @@ class AlimentoSistemaFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->realText(rand(10, 30)),
+            'titulo' => $this->faker->realText(rand(10, 30)),
             'descricao' => $this->faker->realText(rand(10, 100)),
             'categoria' => $this->faker->randomElement(['Frutas', 'Legumes', 'Carnes', 'Bebidas']),
             'unidade_medida' => $this->faker->randomElement(['kg', 'g', 'unidade']),

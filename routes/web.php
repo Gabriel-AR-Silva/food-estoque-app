@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Cesta;
 use App\Http\Controllers\{
     CestaController,
     MeuEstoqueController,
@@ -22,11 +23,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// Rota para testes
+Route::get('/teste', function () {
+    $cestas = Cesta::factory()->count(10)->create()->toArray();
+    // $cestas->load([
+    //     'cestas'
+    // ]);
+    dd($cestas);
+});
+
 // Route::get('/food-estoque', [AdminController::class, 'index']);
 Route::get('/food-estoque', function () {
     return view('food-estoque');
 });
-
 
 /**
  *  Meu Estoque

@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('cesta', function (Blueprint $table) {
             $table->id();
-            $table->string("title", 105);
-            $table->string("descricao", 350);
-            $table->string("foto", 255);
+            $table->string('titulo', 105);
+            $table->string('descricao', 350);
+            $table->string('foto', 255);
+            $table->boolean('pronta')->default(0);
             $table->timestamp('updated_at')->useCurrent();
             $table->timestamp('created_at')->useCurrent();
         });

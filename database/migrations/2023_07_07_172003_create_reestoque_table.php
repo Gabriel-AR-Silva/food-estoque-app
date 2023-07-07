@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('meu_estoque', function (Blueprint $table) {
+        Schema::create('reestoque', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('cesta_id')->nullable();
             $table->foreign('cesta_id')->references('id')->on('cesta');
@@ -21,9 +21,16 @@ return new class extends Migration
             $table->string('unidade_medida', 10);
             $table->float('quantidade');
             $table->string('foto', 255);
-            $table->datetime('validade');
             $table->timestamp('updated_at')->useCurrent();
             $table->timestamp('created_at')->useCurrent();
         });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('reestoque');
     }
 };

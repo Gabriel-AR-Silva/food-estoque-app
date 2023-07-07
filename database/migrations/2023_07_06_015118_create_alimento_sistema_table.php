@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('alimento_sistema', function (Blueprint $table) {
             $table->id();
-            $table->string("title", 150);
+            $table->string("titulo", 150);
             $table->string("descricao", 450);
             $table->string("categoria", 105);
             $table->string("unidade_medida", 10);

@@ -21,9 +21,24 @@ class CestaFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->realText(rand(10, 105)),
+            'titulo' => $this->faker->realText(rand(10, 105)),
             'descricao' => $this->faker->realText(rand(10, 350)),
-            'foto' => $this->faker->imageUrl()
+            'foto' => $this->faker->imageUrl(),
+            'pronta' => 0
         ];
+    }
+
+    public function configure() {
+        return $this->afterCreating(function (Cesta $cesta) {
+            $cestas_reestoque = \App\Models\Reestoque::where('cesta_id', $cesta->id)->count();
+            $cestas_meu_estoque = \App\Models\MeuEstoque::where('cesta_id', $cesta->id)->count();
+
+            if($cestas_reestoque > 0 || $cestas_meu_estoque == 0){ 
+                return; 
+            }
+
+            $cesta->pronta = 1;
+            $cesta->save();
+        });
     }
 }

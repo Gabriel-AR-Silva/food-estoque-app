@@ -4,12 +4,12 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Cesta;
-use App\Models\MeuEstoque;
+use App\Models\Reestoque;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\MeuEstoque>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class MeuEstoqueFactory extends Factory
+class ReestoqueFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,7 +17,7 @@ class MeuEstoqueFactory extends Factory
      * @return array<string, mixed>
      */
 
-    protected $model = MeuEstoque::class;
+    protected $model = Reestoque::class;
 
     public function definition(): array
     {
@@ -31,7 +31,6 @@ class MeuEstoqueFactory extends Factory
                 $this->faker->randomFloat(2, 0.1, 20)
             ]),
             'foto' => $this->faker->imageUrl(),
-            'validade' => $this->faker->dateTimeBetween('now', '+1 week'),
             'cesta_id' => $this->faker->randomElement([
                 Cesta::inRandomOrder()->first()->id ?? Cesta::factory()->create()->id, null
             ]),

@@ -11,7 +11,11 @@ class Cesta extends Model
 
     protected $table = 'cesta';
 
-    public function meu_estoque_cesta() {
+    public function meu_estoque() {
         return $this->hasMany(MeuEstoque::class);
+    }
+
+    public function reestoque() {
+        return $this->hasMany(Reestoque::class);
     }
 }

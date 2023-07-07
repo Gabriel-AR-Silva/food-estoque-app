@@ -7,7 +7,8 @@ use Illuminate\Database\Seeder;
 use App\Models\{
     Cesta,
     AlimentoSistema,
-    MeuEstoque
+    MeuEstoque,
+    Reestoque
 };
 
 class DatabaseSeeder extends Seeder
@@ -17,8 +18,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        AlimentoSistema::factory(150)->create();
-        Cesta::factory(20)->create();
-        MeuEstoque::factory(80)->create();
+        AlimentoSistema::factory(50)->create();
+        MeuEstoque::factory(20)->create();
+        Reestoque::factory(1)->create();
+        Cesta::factory(8)->create();
     }
 }
