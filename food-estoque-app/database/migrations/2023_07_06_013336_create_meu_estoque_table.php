@@ -13,13 +13,15 @@ return new class extends Migration
     {
         Schema::create('meu_estoque', function (Blueprint $table) {
             $table->id();
-            $table->string("title", 150);
-            $table->string("descricao", 450);
-            $table->string("categoria", 150)->nullable();;
-            $table->string("unidade_medida", 10);
-            $table->decimal(8,2);
-            $table->string("foto", 255);
-            $table->datetime("validade");
+            $table->unsignedBigInteger('cesta_id');
+            $table->foreign('cesta_id')->references('id')->on('cesta');
+            $table->string('title', 150);
+            $table->string('descricao', 450);
+            $table->string('categoria', 150)->nullable();;
+            $table->string('unidade_medida', 10);
+            $table->decimal('quantidade', 8,2);
+            $table->string('foto', 255);
+            $table->datetime('validade');
             $table->timestamp('updated_at')->useCurrent();
             $table->timestamp('created_at')->useCurrent();
         });

@@ -9,7 +9,9 @@ class MeuEstoque extends Model
 {
     use HasFactory;
 
+    protected $table = 'meu_estoque';
+
     public function meu_estoque_cesta() {
-        return $this->belongsTo('App\Models\MeuEstoqueCesta');
+        return $this->belongsTo(Cesta::class);
     }
 }

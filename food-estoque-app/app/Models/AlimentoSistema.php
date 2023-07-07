@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class AlimentoSistema extends Model
 {
     use HasFactory;
+
+    protected $table = 'alimento_sistema';
 }
