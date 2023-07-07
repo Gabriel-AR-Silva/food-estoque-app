@@ -15,10 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string("title", 150);
             $table->string("descricao", 450);
-            $table->string("categoria", 150)->nullable();
+            $table->string("categoria", 105);
             $table->string("unidade_medida", 10);
-            $table->decimal(8,2);
+            $table->float('quantidade');
             $table->string("foto", 255);
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 };
