@@ -4,12 +4,6 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\{
-    Cesta,
-    AlimentoSistema,
-    MeuEstoque,
-    Reestoque
-};
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,9 +12,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        AlimentoSistema::factory(100)->create();
-        MeuEstoque::factory(30)->create();
-        Reestoque::factory(10)->create();
-        Cesta::factory(6)->create();
+        // \App\Models\User::factory(10)->create();
+
+        // \App\Models\User::factory()->create([
+        //     'name' => 'Test User',
+        //     'email' => 'test@example.com',
+        // ]);
     }
 }
