@@ -4,6 +4,12 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use App\Models\Cesta;
+use App\Http\Controllers\{
+    CestaController,
+    MeuEstoqueController,
+    ReestoqueController
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +42,48 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+
+
+
+/*
+    Branch Main logo abaixo
+*/
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// // Rota para testes
+// Route::get('/teste', function () {
+//     $cestas = Cesta::factory()->count(20)->create()->toArray();
+//     // $cestas->load([
+//     //     'cestas'
+//     // ]);
+//     dd($cestas);
+// });
+
+// Route::get('/food-estoque', [AdminController::class, 'index']);
+Route::get('/food-estoque', function () {
+    return view('food-estoque');
+});
+
+/**
+ *  Meu Estoque
+ */
+Route::get('/meu-estoque', [MeuEstoqueController::class, 'index']);
+Route::get('/meu-estoque/validade', [MeuEstoqueController::class, 'meu_estoque_validade']);
+
+/**
+ *  Reestoque
+ */
+Route::get('/reestoque', [ReestoqueController::class, 'index']);
+
+/**
+ *  Cestas
+ */
+Route::get('/cestas', [CestaController::class, 'index']);
+
+
+
