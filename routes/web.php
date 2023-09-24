@@ -23,7 +23,7 @@ use App\Http\Controllers\{
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('Home', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
@@ -34,6 +34,41 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/cestas', function () {
+    return Inertia::render('Cestas/Index');
+})->middleware(['auth', 'verified'])->name('cestas.index');
+
+Route::get('/meu-estoque', function () {
+    return Inertia::render('MeusEstoques/Index');
+})->middleware(['auth', 'verified'])->name('meuEstoque.index');
+
+Route::get('/reestoque', function () {
+    return Inertia::render('Reestoques/Index');
+})->middleware(['auth', 'verified'])->name('reestoque.index');
+
+Route::get('/meu-estoque/validade', function () {
+    return Inertia::render('Validades/Index');
+})->middleware(['auth', 'verified'])->name('validade.index');
+
+
+// /**
+//  *  Meu Estoque
+//  */
+// Route::get('/meu-estoque', [MeuEstoqueController::class, 'index']);
+// Route::get('/meu-estoque/validade', [MeuEstoqueController::class, 'meu_estoque_validade']);
+
+// /**
+//  *  Reestoque
+//  */
+// Route::get('/reestoque', [ReestoqueController::class, 'index']);
+
+// /**
+//  *  Cestas
+//  */
+// Route::get('/cestas', [CestaController::class, 'index']);
+
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -51,10 +86,6 @@ require __DIR__.'/auth.php';
     Branch Main logo abaixo
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 // // Rota para testes
 // Route::get('/teste', function () {
 //     $cestas = Cesta::factory()->count(20)->create()->toArray();
@@ -63,27 +94,6 @@ Route::get('/', function () {
 //     // ]);
 //     dd($cestas);
 // });
-
-// Route::get('/food-estoque', [AdminController::class, 'index']);
-Route::get('/food-estoque', function () {
-    return view('food-estoque');
-});
-
-/**
- *  Meu Estoque
- */
-Route::get('/meu-estoque', [MeuEstoqueController::class, 'index']);
-Route::get('/meu-estoque/validade', [MeuEstoqueController::class, 'meu_estoque_validade']);
-
-/**
- *  Reestoque
- */
-Route::get('/reestoque', [ReestoqueController::class, 'index']);
-
-/**
- *  Cestas
- */
-Route::get('/cestas', [CestaController::class, 'index']);
 
 
 

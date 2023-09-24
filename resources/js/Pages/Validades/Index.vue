@@ -1,14 +1,17 @@
-<!-- @extends('layouts.main')
+<template>
+    <Head title="Validade" />
 
-@section('title', 'Reestoque')
+    <Layout> 
+        Validade
+    </Layout>
+</template>
 
-@section('content')
-
-<br> <br> <br>
-    <p>
-        Pg Reestoque 
-    </p>
-
-    <a href="/">Voltar a Home</a>
-
-@endsection -->
+<script>
+    import Layout from '@/Layouts/AdminLayout.vue';
+    
+    export default {
+        components: {
+            Layout
+        }
+    }
+</script>
