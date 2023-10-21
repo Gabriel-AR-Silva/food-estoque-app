@@ -35,40 +35,27 @@ Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/cestas', function () {
-    return Inertia::render('Cestas/Index');
-})->middleware(['auth', 'verified'])->name('cestas.index');
+/**
+ *  Meu Estoque
+ */
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/meu-estoque', [MeuEstoqueController::class, 'index'])->name('meuEstoque.index');
+    Route::get('/meu-estoque/validade', [MeuEstoqueController::class, 'meu_estoque_validade'])->name('meuEstoque.validade');
+});
 
-Route::get('/meu-estoque', function () {
-    return Inertia::render('MeusEstoques/Index');
-})->middleware(['auth', 'verified'])->name('meuEstoque.index');
+/**
+ *  Reestoque
+ */
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/reestoque', [ReestoqueController::class, 'index'])->name('reestoque.index');
+});
 
-Route::get('/reestoque', function () {
-    return Inertia::render('Reestoques/Index');
-})->middleware(['auth', 'verified'])->name('reestoque.index');
-
-Route::get('/meu-estoque/validade', function () {
-    return Inertia::render('Validades/Index');
-})->middleware(['auth', 'verified'])->name('validade.index');
-
-
-// /**
-//  *  Meu Estoque
-//  */
-// Route::get('/meu-estoque', [MeuEstoqueController::class, 'index']);
-// Route::get('/meu-estoque/validade', [MeuEstoqueController::class, 'meu_estoque_validade']);
-
-// /**
-//  *  Reestoque
-//  */
-// Route::get('/reestoque', [ReestoqueController::class, 'index']);
-
-// /**
-//  *  Cestas
-//  */
-// Route::get('/cestas', [CestaController::class, 'index']);
-
-
+/**
+ *  Cestas
+ */
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/cestas', [CestaController::class, 'index'])->name('cestas.index');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -78,13 +65,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-
-
-
-
-/*
-    Branch Main logo abaixo
-*/
 
 // // Rota para testes
 // Route::get('/teste', function () {

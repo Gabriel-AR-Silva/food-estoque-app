@@ -57,7 +57,7 @@
                         >
                         <Link
                             v-if="$page.props.auth.user"
-                            :href="route('validade.index')"
+                            :href="route('meuEstoque.validade')"
                             class="navbar-item"
                             >Validade</Link
                         >
