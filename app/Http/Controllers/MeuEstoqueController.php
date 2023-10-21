@@ -15,7 +15,7 @@ class MeuEstoqueController extends Controller
     }
 
     public function meu_estoque_validade() {
-        $meu_estoque_val = MeuEstoque::select('id', 'titulo', 'categoria', 'validade')->limit(20)->get();
-        return Inertia::render('Validades/Index', ['meu_estoque_val' => $meu_estoque_val]);
+        $itensValidade = MeuEstoque::select('id', 'titulo', 'categoria', 'validade')->orderBy('validade', 'desc')->limit(20)->get();
+        return Inertia::render('Validades/Index', ['itensValidade' => $itensValidade]);
     }
 }
